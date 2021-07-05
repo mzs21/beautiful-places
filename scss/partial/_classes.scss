@@ -1,0 +1,54 @@
+@import "avatar";
+@import "screen";
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-template-rows: (400px, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 100px;
+
+    @include screenSizeWidth(1440px);
+    @include screenSizeWidth(1024px);
+    @include screenSizeWidth(768px);
+    @include screenSizeWidth(425px);
+    @include screenSizeWidth(375px);
+    @include screenSizeWidth(320px);
+    @include screenSizeWidth(280px);
+}
+
+.avatar {
+    @extend .avatar;
+}
+
+.blue-mosque{
+    background-image: url('https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=719&q=80');
+}
+
+.hagia-sophia{
+    background-image:url('https://images.unsplash.com/photo-1601163130717-627cde53c1de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+}
+
+.cappadocia{
+    background-image:url('https://images.unsplash.com/photo-1510253687831-0f982d7862fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=747&q=80');
+}
+
+.bisnakandi{
+    background-image: url('https://images.unsplash.com/photo-1599137248983-e6061c27ec80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=948&q=80');
+}
+
+.sundarbans{
+    background-image: url('https://images.unsplash.com/photo-1549300461-11c5b94e8855?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80');
+}
+
+.sonargaon{
+    background-image:url('https://images.unsplash.com/photo-1604993497451-eed6eb271a9c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80');
+}
+
+.dhuppani{
+    background-image: url('https://images.unsplash.com/photo-1574691967466-c6473ad5d643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=805&q=80');
+}
+
+.sajek{
+    background-image: url('https://images.unsplash.com/photo-1589307357647-4e11b161a2b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=716&q=80');
+}

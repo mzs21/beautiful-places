@@ -1,0 +1,152 @@
+.avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  justify-self: center;
+  --scale: 0;
+  --color: rgb(77, 75, 75);
+  --arrowSize: 15px;
+}
+
+.avatar::after, .avatar::before {
+  position: absolute;
+  content: '';
+  top: -6rem;
+  left: 50%;
+  transform: translate(-50%, var(--translate-y, 0%)) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.avatar:hover::before, .avatar:hover::after {
+  --scale: 1;
+}
+
+.avatar::before {
+  --translate-y: calc(-100% - var(--arrowSize));
+  content: attr(data-tooltip);
+  width: max-content;
+  max-width: 100%;
+  height: auto;
+  padding: 15px;
+  background: var(--color);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.avatar::after {
+  --translate-y: calc(-1 * var(--arrowSize));
+  content: '';
+  border: var(--arrowSize) solid transparent;
+  border-top-color: var(--color);
+  transform-origin: top center;
+}
+
+.avatar:hover {
+  transform: scale(1.2);
+  border: 1px solid;
+  padding: 20px;
+  box-shadow: 0 0 50px 10px black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: 400px, 1fr;
+  grid-auto-rows: 1fr;
+  grid-gap: 100px;
+}
+
+@media screen and (min-width: 1440px) {
+  .container div:nth-child(1):hover, .container div:nth-child(2):hover, .container div:nth-child(3):hover {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container div:nth-child(1):hover, .container div:nth-child(2):hover {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container div:nth-child(1):hover, .container div:nth-child(2):hover {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .container div:nth-child(1):hover {
+    margin-top: 150px;
+  }
+  .container div:nth-child(2):hover {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .container div:nth-child(1):hover {
+    margin-top: 180px;
+  }
+  .container div:nth-child(2):hover {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .container div:nth-child(1):hover {
+    margin-top: 310px;
+  }
+  .container div:nth-child(2):hover {
+    margin-top: 230px;
+  }
+}
+
+@media screen and (min-width: 280px) {
+  .container div:nth-child(1):hover {
+    margin-top: 450px;
+  }
+  .container div:nth-child(2):hover {
+    margin-top: 360px;
+  }
+}
+
+.blue-mosque {
+  background-image: url("https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=719&q=80");
+}
+
+.hagia-sophia {
+  background-image: url("https://images.unsplash.com/photo-1601163130717-627cde53c1de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+}
+
+.cappadocia {
+  background-image: url("https://images.unsplash.com/photo-1510253687831-0f982d7862fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=747&q=80");
+}
+
+.bisnakandi {
+  background-image: url("https://images.unsplash.com/photo-1599137248983-e6061c27ec80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=948&q=80");
+}
+
+.sundarbans {
+  background-image: url("https://images.unsplash.com/photo-1549300461-11c5b94e8855?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80");
+}
+
+.sonargaon {
+  background-image: url("https://images.unsplash.com/photo-1604993497451-eed6eb271a9c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80");
+}
+
+.dhuppani {
+  background-image: url("https://images.unsplash.com/photo-1574691967466-c6473ad5d643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=805&q=80");
+}
+
+.sajek {
+  background-image: url("https://images.unsplash.com/photo-1589307357647-4e11b161a2b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=716&q=80");
+}
+
+body, *::after, *::before {
+  margin-top: 100px;
+}

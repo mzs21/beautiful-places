@@ -1,0 +1,56 @@
+.avatar{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    justify-self: center;
+
+    --scale: 0;
+    --color: rgb(77, 75, 75);
+    --arrowSize: 15px;
+
+    &::after, &::before{
+        position: absolute;
+        content: '';
+        top: -6rem;
+        left: 50%;
+        transform: translate(-50%, var(--translate-y, 0%)) scale(var(--scale));
+        transition: 150ms transform;
+        transform-origin: bottom center;
+    }
+
+    &:hover::before,
+    &:hover::after{
+        --scale: 1;
+    }
+
+    &::before{
+        --translate-y: calc(-100% - var(--arrowSize));
+        content: attr(data-tooltip);
+        width: max-content; 
+        max-width: 100%;
+        height: auto;
+        padding: 15px;
+        background: var(--color);
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    &::after{
+        --translate-y: calc(-1 * var(--arrowSize));
+        content: '';
+        border: var(--arrowSize) solid transparent;
+        border-top-color: var(--color);
+        transform-origin: top center;
+    }
+
+    &:hover{
+        transform: scale(1.2);
+        border: 1px solid;
+        padding: 20px;
+        box-shadow: 0 0 50px 10px black;
+    }
+}

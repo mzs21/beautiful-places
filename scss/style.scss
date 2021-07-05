@@ -1,0 +1,9 @@
+@import "partial/classes";
+
+body, *::after, *::before {
+    margin-top: 100px;
+}
+
+.container{
+    @extend .container;
+}
