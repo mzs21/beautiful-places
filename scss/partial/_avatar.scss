@@ -6,7 +6,7 @@
     background-size: cover;
     position: relative;
     justify-self: center;
-
+    
     --scale: 0;
     --color: rgb(77, 75, 75);
     --arrowSize: 15px;
@@ -29,7 +29,7 @@
     &::before{
         --translate-y: calc(-100% - var(--arrowSize));
         content: attr(data-tooltip);
-        width: max-content; 
+        width: 300px; 
         max-width: 100%;
         height: auto;
         padding: 15px;
@@ -52,5 +52,6 @@
         border: 1px solid;
         padding: 20px;
         box-shadow: 0 0 50px 10px black;
+        margin-top: 100px;
     }
 }

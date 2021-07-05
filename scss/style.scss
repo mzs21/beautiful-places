@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import "partial/classes";
+
 
 body, *::after, *::before {
     margin-top: 100px;
+}
+
+header{
+    font-size: 60px;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+
+.box{
+    background-color: transparent;
+    width: auto;
+    height: 5em;
+    grid-column: auto/ span 2;
+    grid-row: auto/ span 1;
+    box-sizing: border-box;
 }
 
 .container{

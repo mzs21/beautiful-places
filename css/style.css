@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 .avatar {
   width: 300px;
   height: 300px;
@@ -28,7 +29,7 @@
 .avatar::before {
   --translate-y: calc(-100% - var(--arrowSize));
   content: attr(data-tooltip);
-  width: max-content;
+  width: 300px;
   max-width: 100%;
   height: auto;
   padding: 15px;
@@ -51,6 +52,7 @@
   border: 1px solid;
   padding: 20px;
   box-shadow: 0 0 50px 10px black;
+  margin-top: 100px;
 }
 
 .container {
@@ -58,16 +60,7 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: 400px, 1fr;
   grid-auto-rows: 1fr;
-  grid-gap: 100px;
-  /*
-    @include screenSizeWidth(1440px);
-    @include screenSizeWidth(1024px);
-    @include screenSizeWidth(768px);
-    @include screenSizeWidth(425px);
-    @include screenSizeWidth(375px);
-    @include screenSizeWidth(320px);
-    @include screenSizeWidth(280px);
-    */
+  grid-gap: 50px;
 }
 
 .blue-mosque {
@@ -104,4 +97,19 @@
 
 body, *::after, *::before {
   margin-top: 100px;
+}
+
+header {
+  font-size: 60px;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+.box {
+  background-color: transparent;
+  width: auto;
+  height: 5em;
+  grid-column: auto/ span 2;
+  grid-row: auto/ span 1;
+  box-sizing: border-box;
 }
