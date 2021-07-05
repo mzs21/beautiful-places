@@ -1,7 +1,7 @@
 
 @mixin screenSizeWidth($screenSizeWidth)
 { 
-    @if($screenSizeWidth > 1024px){
+    @if($screenSizeWidth > 1024px){  
         @media screen and (min-width: $screenSizeWidth) {
             div{
                 &:nth-child(1), &:nth-child(2), &:nth-child(3){

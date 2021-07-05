@@ -8,6 +8,7 @@
     grid-auto-rows: 1fr;
     grid-gap: 100px;
 
+    /*
     @include screenSizeWidth(1440px);
     @include screenSizeWidth(1024px);
     @include screenSizeWidth(768px);
@@ -15,6 +16,7 @@
     @include screenSizeWidth(375px);
     @include screenSizeWidth(320px);
     @include screenSizeWidth(280px);
+    */
 }
 
 .avatar {
