@@ -5,7 +5,10 @@
     grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
     grid-template-rows: (400px, 1fr);
     grid-auto-rows: 1fr;
-    grid-gap: 50px;
+    grid-gap: 100px;
+    row-gap: 200px;
+
+    
 }
 
 .avatar {
