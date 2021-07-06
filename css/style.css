@@ -116,7 +116,7 @@ body, *::after, *::before {
 }
 
 header {
-  font-size: 60px;
+  font-size: 30px;
   font-family: 'Lobster', cursive;
   text-align: center;
 }
