@@ -1,0 +1,20 @@
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 100px;
+    
+    .github{
+        background-color: inherit;
+        background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/github.svg');
+        width: 4em;
+        height: 4em;
+    }
+
+    .linkedIn{
+        background-color: inherit;
+        background-image: url('https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg');
+        width: 4em;
+        height: 4em;
+    }
+}

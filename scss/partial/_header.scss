@@ -1,0 +1,14 @@
+header{
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+
+    .box{
+        background-color: transparent;
+        width: auto;
+        height: 12em;
+        grid-column: auto/ span 2;
+        grid-row: auto/ span 1;
+        box-sizing: border-box;
+    }
+}

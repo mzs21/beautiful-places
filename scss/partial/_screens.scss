@@ -1,0 +1,56 @@
+@import "avatar";
+@import "classes";
+@import "header";
+
+$media-tablet: "only screen and (max-width : 768px)";
+$media-galaxy-fold: "only screen and (max-width : 280px)";
+
+// Avatar
+
+@media #{$media-tablet} {
+    .avatar{
+        width: 250px;
+        height: 250px;
+
+        &:hover{
+            transform: scale(1.0);
+        }
+    }
+}
+
+@media #{$media-galaxy-fold}{
+    .avatar{    
+        width: 200px;
+        height: 200px;
+
+        &:hover{
+            transform: scale(1.0);
+        }
+    }
+}
+
+// ---------------------------
+
+// Classes
+
+@media #{$media-tablet} {
+    .container{
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    }
+}
+
+@media #{$media-galaxy-fold}{
+    .container{
+        grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    }
+}
+
+// ---------------------------
+
+// Header
+
+@media #{$media-galaxy-fold}{
+    header{
+        font-size: 30px;
+    }
+}
